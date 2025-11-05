@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba 12</title>
+</head>
+<body>
+
+<h1>Vježba 12</h1>
+
+<form action="posalji.php" method="post">
+
+    <label for="fname">First Name *</label><br>
+    <input type="text" id="fname" name="firstname" placeholder="Your first name.." required><br>
+
+    <label for="lname">Last Name *</label><br>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required><br>
+
+    <label for="email">Your E-mail *</label><br>
+    <input type="email" id="email" name="email" placeholder="Your e-mail.." required><br><br>
+
+    <label for="country">Country</label><br>
+    <select id="country" name="country">
+        <option value="">Please select</option>
+        <option value="BE">Belgium</option>
+        <option value="HR" selected>Croatia</option>
+        <option value="LU">Luxembourg</option>
+        <option value="HU">Hungary</option>
+    </select><br><br>
+
+    <label for="message">Message</label><br>
+    <textarea id="message" name="message" placeholder="Write something.."></textarea><br><br>
+
+    <input type="submit" value="Send">
+    <input type="reset" value="Reset">
+
+</form>
+
+<hr>
+
+</body>
+</html>
