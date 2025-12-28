@@ -1,0 +1,488 @@
+:root {
+    --primary-color: #0069d9;   /* plava */
+    --primary-dark: #0053aa;
+    --secondary-color: #ffcc00; /* žuta */
+    --bg-light: #ffffff;
+    --bg-page: #f0f0f0;
+    --text-dark: #333333;
+    --text-muted: #555555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.page {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 1rem 2rem;
+}
+
+/* ============================
+   HEADER I BANNER
+   ============================ */
+header {
+    background-color: var(--bg-light);
+    border: 2px solid var(--secondary-color);
+    margin: 20px 0 10px 0;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.banner img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    border-bottom: 6px solid var(--secondary-color);
+}
+
+/* ============================
+   NAVIGACIJA – HAMBURGER NA MOBILU
+   ============================ */
+.main-nav {
+    margin-top: 10px;
+    background-color: var(--text-dark);
+    border-radius: 8px;
+    position: relative;
+    overflow: visible; 
+}
+
+.main-nav::before {
+    content: "☰ Meni";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem 1rem;
+}
+
+.main-nav:hover ul,
+.main-nav:focus-within ul {
+    display: flex;
+}
+
+.main-nav li {
+    margin: 0;
+}
+
+.main-nav a {
+    display: block;
+    padding: 0.7rem 1.2rem;
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 999px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+    background-color: #555;
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+.main-nav a:active {
+    transform: scale(0.97);
+    background-color: #222;
+}
+
+.main-nav a:visited {
+    color: #dddddd;
+}
+
+.main-nav a[href="gallery.html"],
+.main-nav a[href="galerija.html"] {
+    background-color: #ff6200;
+    font-weight: 800;
+    border: 2px solid white;
+}
+
+.main-nav a[target="_blank"] {
+    background-color: #d11200;
+    position: relative;
+    padding-right: 2.8rem;
+}
+
+.main-nav a[target="_blank"]::after {
+    content: "↗";
+    position: absolute;
+    right: 1rem;
+    font-size: 1.1em;
+}
+
+/* ============================
+   GLAVNI SADRŽAJ
+   ============================ */
+main {
+    background-color: var(--bg-light);
+    border: 1px solid #cccccc;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+}
+
+main h1,
+main h2,
+.section-header h1,
+.section-title,
+.lego-contact h2,
+.lego-gallery h2 {
+    font-family: "Fredoka", "Georgia", serif;
+}
+
+main h1 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+main h2 {
+    color: var(--text-dark);
+    font-size: 20px;
+    margin: 15px 0 8px;
+}
+
+.section-header {
+    background-color: var(--bg-light);
+    border: 2px solid var(--secondary-color);
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.uvod {
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#osnovan {
+    background-color: var(--bg-light);
+    border: 2px solid var(--secondary-color);
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    border-radius: 6px;
+}
+
+.vazno {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.lego-link {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 10px 0;
+    text-decoration: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    color: var(--primary-color);
+    background-color: var(--bg-light);
+    font-weight: 600;
+}
+
+.lego-slika {
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid var(--secondary-color);
+    padding: 6px;
+    margin: 20px auto;
+    border-radius: 6px;
+    background-color: var(--bg-light);
+    display: block;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ============================
+   TABLICE
+   ============================ */
+.raspored {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid var(--secondary-color);
+    margin: 20px 0;
+    background-color: var(--bg-light);
+}
+
+.raspored caption {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.raspored th,
+.raspored td {
+    border: 1px solid #cccccc;
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.raspored th {
+    background-color: #fff7cc;
+}
+
+.raspored tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* ============================
+   GALERIJA
+   ============================ */
+.lego-gallery {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 24px;
+    background-color: var(--bg-light);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.lego-gallery h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.lego-gallery p {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.lego-gallery-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.gallery-item {
+    background-color: #ffffff;
+    border: 3px solid #cccccc;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.gallery-item figcaption {
+    padding: 12px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+    background-color: #f9f9f9;
+}
+
+.gallery-item[data-set="city"] { border-color: steelblue; }
+.gallery-item[data-set="technic"] { border-color: darkorange; }
+.gallery-item[data-set="friends"] { border-color: deeppink; }
+
+.gallery-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+    border-color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* ============================
+   KONTAKT FORMA
+   ============================ */
+.lego-contact {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: var(--bg-light);
+    border: 4px solid var(--secondary-color);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.lego-contact h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 28px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.lego-contact p {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    font-size: 17px;
+}
+
+.lego-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.lego-form .form-row {
+    margin-bottom: 1.5rem;
+}
+
+.lego-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: #333;
+}
+
+.lego-form .option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.lego-form input[type="checkbox"],
+.lego-form input[type="radio"] {
+    width: auto;
+}
+
+.lego-form input[type="text"],
+.lego-form input[type="email"],
+.lego-form select,
+.lego-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    font: inherit;
+    font-size: 16px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.lego-form input:enabled:focus,
+.lego-form select:enabled:focus,
+.lego-form textarea:enabled:focus {
+    border-color: #ff6200;
+    background-color: #fffbe6;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 98, 0, 0.3);
+}
+
+.lego-form input[type="checkbox"]:checked + label,
+.lego-form input[type="radio"]:checked + label {
+    font-weight: 700;
+    color: #d11200;
+}
+
+.lego-form input[type="radio"]:checked {
+    accent-color: #ff6200;
+}
+
+.lego-form input:disabled,
+.lego-form select:disabled,
+.lego-form textarea:disabled {
+    background-color: #ffe0b3;
+    color: #999;
+    cursor: not-allowed;
+    border-color: #ff9933;
+}
+
+.lego-form .btn-send {
+    display: block;
+    width: 220px;
+    margin: 30px auto 0;
+    padding: 0.9rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+footer {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin: 20px 0;
+}
+
+/* ============================
+   MEDIA QUERIES
+   ============================ */
+@media (min-width: 768px) {
+    .main-nav::before {
+        display: none;
+    }
+
+    .main-nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0.8rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .lego-gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 24px;
+    }
+
+    .lego-contact {
+        display: grid;
+        grid-template-columns: 1fr 1.6fr;
+        column-gap: 3rem;
+        align-items: start;
+        padding: 50px;
+    }
+
+    .lego-contact > h2,
+    .lego-contact > p {
+        grid-column: 1;
+        text-align: left;
+    }
+
+    .lego-contact .lego-form {
+        grid-column: 2;
+        margin: 0;
+        max-width: none;
+    }
+}
