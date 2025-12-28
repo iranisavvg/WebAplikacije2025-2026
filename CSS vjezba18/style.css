@@ -1,0 +1,460 @@
+:root {
+    --primary-color: #0069d9;   /* plava */
+    --primary-dark: #0053aa;
+    --secondary-color: #ffcc00; /* žuta */
+    --bg-light: #ffffff;
+    --bg-page: #f0f0f0;
+    --text-dark: #333333;
+    --text-muted: #555555;
+}
+ *{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-dark);
+}
+
+header {
+    background-color: var(--bg-light);
+    border: 1px solid #cccccc;
+    margin: 20px;
+    padding: 10px;
+}
+
+.banner img {
+    width: 100%;
+    display: block;
+    border-bottom: 4px solid var(--secondary-color);
+}
+
+nav {
+    background-color: var(--text-dark);
+    padding: 8px;
+    margin-top: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 12px;
+    font-size: 14px;
+}
+
+main {
+    background-color: var(--bg-light);
+    border: 1px solid #cccccc;
+    margin: 0 20px 20px 20px;
+    padding: 10px;
+}
+
+main p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+main h1,
+main h2,
+.section-header h1,
+.section-title,
+.lego-contact h2,
+.lego-gallery h2 {
+    font-family: "Fredoka", "Georgia", serif;
+}
+
+main h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+main h2 {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    font-size: 20px;
+}
+.section-header {
+    background-color: var(--bg-light);
+    border: 2px solid var(--secondary-color);
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.uvod {
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#osnovan {
+    background-color: var(--bg-light);
+    border: 2px solid var(--secondary-color);
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    border-radius: 6px;
+}
+
+.vazno {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.lego-link {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 10px 0;
+    text-decoration: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    color: var(--primary-color);
+    background-color: var(--bg-light);
+    font-weight: 600;
+}
+
+.lego-slika {
+    width: 300px;
+    border: 2px solid var(--secondary-color);
+    padding: 6px;
+    margin: 12px 0;
+    border-radius: 6px;
+    background-color: var(--bg-light);
+}
+
+.lista-tema {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    list-style-type: square;
+}
+
+.napomena {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* TABLICA – RASPORED RADIONICA */
+.raspored {
+     width: 100%;
+    border-collapse: collapse;
+    border: 2px solid var(--secondary-color);
+    padding: 10px;
+    margin: 20px 0;
+    background-color: var(--bg-light);
+}
+
+.raspored caption {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.raspored th,
+.raspored td {
+    border: 1px solid #cccccc;
+    padding: 6px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.raspored th {
+    background-color: #fff7cc;
+}
+
+
+/* 1. Osnovni izgled forme */
+.lego-contact {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: var(--bg-light);
+    border: 4px solid var(--secondary-color);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+.lego-contact h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 28px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.lego-contact p {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    font-size: 17px;
+}
+.lego-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.lego-form .form-row {
+    margin-bottom: 1.5rem;
+}
+
+.lego-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: #333;
+}
+
+/* 2. Red za checkbox/radio opcije */
+.lego-form .option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.lego-form .option input[type="checkbox"],
+.lego-form .option input[type="radio"] {
+    width: auto;
+}
+
+/* 3. Osnovni izgled polja input, select i textarea */
+.lego-form input[type="text"],
+.lego-form input[type="email"],
+.lego-form select,
+.lego-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    font: inherit;
+    font-size: 16px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+/* 4. :focus */
+.lego-form input:focus,
+.lego-form select:focus,
+.lego-form textarea:focus {
+    border-color: #ff6200;
+    background-color: #fffbe6;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 98, 0, 0.3);
+}
+
+/* 5. :checked */
+.lego-form input[type="checkbox"]:checked + label,
+.lego-form input[type="radio"]:checked + label {
+    font-weight: 700;
+    color: #d11200;                 
+}
+
+.lego-form input[type="radio"]:checked {
+    accent-color: #ff6200;
+}
+
+/* 6. :disabled */
+.lego-form input:disabled {
+    background-color: #ffe0b3;
+    color: #999;
+    cursor: not-allowed;
+    border-color: #ff9933;
+}
+
+/* 7. :enabled */
+.lego-form input:enabled,
+.lego-form select:enabled,
+.lego-form textarea:enabled {
+    background-color: #ffffff;
+}
+
+/* 8. Gumb + :hover */
+.lego-form .btn-send {
+    display: block;
+    width: 220px;
+    margin: 30px auto 0;
+    padding: 0.9rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.lego-form .btn-send:hover {
+    background-color: var(--primary-dark);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transform: translateY(-2px);
+}
+
+/* 1.2.1 – Osnovni izgled linkova */
+ .main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.main-nav a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: 0.2s ease;
+}
+
+
+
+/* 1.2.2 – Pseudo-klase */
+
+/* :hover */
+.main-nav a:hover {
+    background-color: #555;
+}
+
+/* :focus */
+.main-nav a:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+    background-color: #444;
+}
+
+/* :active */
+.main-nav a:active {
+    transform: scale(0.97);
+    background-color: #222;
+}
+
+/* :visited */
+.main-nav a:visited {
+    color: #dddddd;
+}
+
+/* 1.2.3 – Selektori atributa */
+
+/* Poseban stil za link koji vodi na galeriju.html */
+.main-nav a[href="galerija.html"] {
+    background-color: #ff6200;     
+    font-weight: 800;
+    border: 2px solid white;
+}
+
+/* Poseban stil za vanjski link LEGO */
+.main-nav a[target="_blank"] {
+    background-color: #d11200;     
+    position: relative;
+    padding-right: 2.4rem;         
+}
+
+/* Strelica iza vanjskog linka */
+.main-nav a[target="_blank"]::after {
+    content: "↗";
+    font-size: 1.1em;
+}
+
+/* GALERIJA */
+
+.lego-gallery {
+     max-width: 1100px;
+    margin: 40px auto;
+    padding: 24px;
+    background-color: var(--bg-light);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.lego-gallery h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.lego-gallery p {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+.lego-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.gallery-item {
+    background-color: #ffffff;
+    border: 3px solid #cccccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+}
+
+.gallery-item figcaption {
+    padding: 12px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+    background-color: #f9f9f9;
+}
+
+.gallery-item[data-set="city"] {
+    border-color: steelblue;
+}
+
+.gallery-item[data-set="technic"] {
+    border-color: darkorange;
+}
+
+.gallery-item[data-set="friends"] {
+    border-color: deeppink;
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+    border-color: var(--primary-color);
+    cursor: pointer;
+}
+
+
+ 
