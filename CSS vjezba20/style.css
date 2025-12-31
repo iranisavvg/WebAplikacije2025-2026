@@ -1,0 +1,14 @@
+/* Vjezba 20 */
+
+/* Font*/
+.h1[data-v-04b753c2] {
+    font-family: Superscripts-Oswald, Oswald, Roboto Condensed, Roboto, Noto Sans TC, Noto Sans SC, Noto Sans JP, Noto Sans KR, Prompt, sans-serif;
+}
+
+/* Boja */
+
+.g__button--contained--candy-blue {
+    color: #000;
+    background: #6dcff6;
+    border-color: #6dcff6;
+}
